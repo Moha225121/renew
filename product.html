@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج – Rénew Skincare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- THEME TOGGLE (CORRECT POSITION) -->
+<button id="themeToggle" class="theme-btn">🌙</button>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">Rénew</div>
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="shop.html">التسوق</a>
+        <a href="about.html">عن رينيو</a>
+        <a href="contact.html">تواصل معنا</a>
+    </nav>
+</header>
+
+<!-- PRODUCT PAGE -->
+<section class="product-page">
+
+    <div class="product-container">
+
+        <div class="product-images">
+            <img src="assets/image.png" class="main-img" alt="product">
+        </div>
+
+        <div class="product-details">
+            <h1>Snail Mucin Serum</h1>
+            <p class="price">120 د.ل</p>
+
+            <p class="desc">
+                سيروم الحلزون غني بالمواد المرطبة والمجددة للبشرة. يساعد على تقليل التصبغات وتحسين نضارة البشرة.
+            </p>
+
+            <a href="#" class="btn-primary">أضف إلى السلة</a>
+
+            <div class="more-info">
+                <h3>طريقة الاستخدام</h3>
+                <p>يستخدم بعد التونر وقبل المرطب، مرة أو مرتين يومياً.</p>
+
+                <h3>الفوائد</h3>
+                <p>ترطيب – تفتيح – تجديد البشرة – تقليل آثار الحبوب.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2025 Rénew Skincare – جميع الحقوق محفوظة</p>
+</footer>
+
+
+<!-- FIXED + CLEANED JAVASCRIPT -->
+<script>
+// Smooth page transitions
+document.querySelectorAll("a").forEach(link => {
+    if (link.href && !link.href.includes("#")) {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(() => window.location = this.href, 400);
+        });
+    }
+});
+
+// Dark mode toggle
+const toggle = document.getElementById("themeToggle");
+toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+});
+
+// Add to cart animation
+const btn = document.querySelector(".btn-primary");
+btn.addEventListener("click", function(e) {
+    e.preventDefault();
+    btn.classList.add("cart-animate");
+    setTimeout(() => btn.classList.remove("cart-animate"), 400);
+});
+</script>
+
+</body>
+</html>

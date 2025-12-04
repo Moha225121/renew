@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سلة المشتريات – Rénew Skincare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<button id="themeToggle" class="theme-btn">🌙</button>
+
+</head>
+<script>
+document.querySelectorAll("a").forEach(link => {
+    if (link.href && !link.href.includes("#")) {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(() => window.location = this.href, 400);
+        });
+    }
+});
+document.querySelectorAll("a").forEach(link => {
+    if (link.href && !link.href.includes("#")) {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(() => window.location = this.href, 400);
+        });
+    }
+});
+const toggle = document.getElementById("themeToggle");
+toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+});
+</script>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">Rénew</div>
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="shop.html">التسوق</a>
+        <a href="cart.html" class="active">السلة</a>
+    </nav>
+</header>
+
+<!-- CART PAGE -->
+<section class="cart-page">
+    <h1>سلة المشتريات</h1>
+
+    <div class="cart-container">
+
+        <div class="cart-item">
+            <img src="assets/image.png" alt="">
+            <div class="cart-info">
+                <h3>Snail Mucin Serum</h3>
+                <p>الكمية: 1</p>
+                <p class="price">120 د.ل</p>
+            </div>
+        </div>
+
+        <div class="cart-item">
+            <img src="assets/image.png" alt="">
+            <div class="cart-info">
+                <h3>Some By Mi Toner</h3>
+                <p>الكمية: 1</p>
+                <p class="price">95 د.ل</p>
+            </div>
+        </div>
+
+        <div class="cart-summary">
+            <h3>ملخص الطلب</h3>
+            <p>المجموع الفرعي: <strong>215 د.ل</strong></p>
+            <p>الشحن: <strong>15 د.ل</strong></p>
+            <p class="total">الإجمالي: <strong>230 د.ل</strong></p>
+            <a href="#" class="btn-primary">إتمام الشراء</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2025 Rénew Skincare – جميع الحقوق محفوظة</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,314 @@
+body {
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+    background: #ffffff;
+    color: #2a2a2a;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #F8D4E2;
+    align-items: center;
+}
+
+.header .logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #C7527A;
+}
+
+.header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #2a2a2a;
+    font-weight: 500;
+}
+
+/* HERO */
+.hero {
+    background: url("assets/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+}
+
+.hero-img {
+    width: 300px;
+    border-radius: 12px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #E7A7B8;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* BRANDS */
+.brands {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.brand-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.brand-card {
+    padding: 15px 25px;
+    background: #FCEEF3;
+    border-radius: 12px;
+    font-weight: 600;
+    border: 1px solid #F4C9D8;
+}
+
+/* PRODUCTS */
+.products {
+    padding: 40px;
+    text-align: center;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    width: 250px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.btn-secondary {
+    display: block;
+    padding: 10px;
+    background: #F8D4E2;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #2a2a2a;
+}
+
+/* INSTAGRAM */
+.instagram {
+    padding: 40px;
+    text-align: center;
+}
+
+.ig-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.ig-grid img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* FOOTER */
+.footer {
+    background: #FCEEF3;
+    padding: 20px;
+    text-align: center;
+}
+/* ---------------------------------------------------
+   GLOBAL SECTION FADE-IN
+-----------------------------------------------------*/
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.9s ease-out forwards;
+}
+
+section:nth-of-type(1) { animation-delay: 0.2s; }
+section:nth-of-type(2) { animation-delay: 0.4s; }
+section:nth-of-type(3) { animation-delay: 0.6s; }
+section:nth-of-type(4) { animation-delay: 0.8s; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------------------------------------
+   PRODUCT CARD HOVER
+-----------------------------------------------------*/
+.product-card {
+    transition: 0.35s ease;
+    transform-origin: center;
+}
+.product-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.product-card img {
+    transition: 0.35s ease;
+}
+.product-card:hover img {
+    transform: scale(1.08);
+}
+
+/* ---------------------------------------------------
+   BUTTONS
+-----------------------------------------------------*/
+.btn-primary, .btn-secondary {
+    transition: 0.3s ease;
+    transform-origin: center;
+}
+
+.btn-primary:hover {
+    background: #E28FA8;
+    box-shadow: 0 0 12px rgba(231, 167, 184, 0.55);
+    transform: translateY(-3px) scale(1.03);
+}
+.btn-secondary:hover {
+    background: #F3B5C8;
+    transform: translateY(-3px) scale(1.03);
+}
+
+/* ---------------------------------------------------
+   FLOATING HERO IMAGE 3D ANIMATION
+-----------------------------------------------------*/
+.float-3d {
+    animation: floating 5s ease-in-out infinite;
+    transform-style: preserve-3d;
+}
+
+@keyframes floating {
+    0%   { transform: translateY(0px) rotateY(0deg); }
+    50%  { transform: translateY(-12px) rotateY(6deg); }
+    100% { transform: translateY(0px) rotateY(0deg); }
+}
+.fade-out {
+    animation: fadeOut 0.5s forwards ease-out;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+/* ---------------------------------------------------
+   PAGE TRANSITION FADE
+-----------------------------------------------------*/
+.fade-out {
+    animation: fadeOut 0.5s forwards ease-out;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+/* THEME BUTTON */
+.theme-btn {
+    background: none;
+    border: 2px solid #C7527A;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #C7527A;
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    background: #FCEEF3;
+}
+
+/* DARK MODE */
+.dark-mode {
+    background: #2a2a2a !important;
+    color: #fff !important;
+}
+
+.dark-mode .header {
+    background: #3a3a3a !important;
+}
+
+.dark-mode .product-card,
+.dark-mode .cart-item {
+    background: #444 !important;
+    color: white !important;
+    box-shadow: none !important;
+}
+/* CART POP EFFECT */
+@keyframes cartPop {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.25); }
+    100% { transform: scale(1); }
+}
+
+.cart-animate {
+    animation: cartPop 0.4s ease-out;
+}
+/* PRODUCT PAGE FIXES */
+.product-page {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.product-container {
+    max-width: 700px;
+    text-align: center;   /* CENTER ALL CONTENT */
+}
+
+.product-images {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.main-img {
+    width: 280px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.product-details h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #C7527A;
+    margin-bottom: 20px;
+}
+
+.desc {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.more-info h3 {
+    margin-top: 20px;
+    color: #C7527A;
+}

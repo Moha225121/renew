@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عن رينيو – Rénew Skincare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script>
+document.querySelectorAll("a").forEach(link => {
+    if (link.href && !link.href.includes("#")) {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(() => window.location = this.href, 400);
+        });
+    }
+});
+document.querySelectorAll("a").forEach(link => {
+    if (link.href && !link.href.includes("#")) {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(() => window.location = this.href, 400);
+        });
+    }
+});
+</script>
+
+<body>
+
+<header class="header">
+    <div class="logo">Rénew</div>
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="shop.html">التسوق</a>
+        <a href="about.html" class="active">عن رينيو</a>
+        <a href="contact.html">تواصل معنا</a>
+    </nav>
+</header>
+
+<section class="about">
+    <h1>من نحن؟</h1>
+
+    <p>
+        Rénew هي منصة ليبية متخصصة في توفير أفضل منتجات العناية بالبشرة والشعر من أشهر الماركات الكورية 
+        والعالمية. نضمن أن جميع منتجاتنا أصلية 100% وبجودة عالية.
+    </p>
+
+    <h2>رسالتنا</h2>
+    <p>نهدف إلى نشر ثقافة العناية الصحيحة بالبشرة وتوفير منتجات فعالة وموثوقة لكل أنواع البشرة.</p>
+
+    <h2>قيمنا</h2>
+    <ul>
+        <li>الجودة أولاً</li>
+        <li>ثقة العملاء</li>
+        <li>منتجات أصلية تماماً</li>
+        <li>خدمة سريعة داخل ليبيا</li>
+    </ul>
+</section>
+
+<footer class="footer">
+    <p>© 2025 Rénew Skincare – جميع الحقوق محفوظة</p>
+</footer>
+
+</body>
+</html>

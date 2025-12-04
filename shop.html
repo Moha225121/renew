@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التسوق – Rénew Skincare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <button id="themeToggle" class="theme-btn">🌙</button>
+</head>
+<script>
+document.querySelectorAll("a").forEach(link => {
+    if (link.href && !link.href.includes("#")) {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(() => window.location = this.href, 400);
+        });
+    }
+});
+document.querySelectorAll("a").forEach(link => {
+    if (link.href && !link.href.includes("#")) {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(() => window.location = this.href, 400);
+        });
+    }
+});
+const toggle = document.getElementById("themeToggle");
+toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+});
+</script>
+
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">Rénew</div>
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="shop.html" class="active">التسوق</a>
+        <a href="about.html">عن رينيو</a>
+        <a href="contact.html">تواصل معنا</a>
+    </nav>
+</header>
+
+<!-- SHOP HERO -->
+<section class="shop-hero">
+    <h1>تسوقي أفضل منتجات العناية بالبشرة</h1>
+    <p>منتجات أصلية – من أشهر الماركات الكورية</p>
+</section>
+
+<!-- PRODUCTS GRID -->
+<section class="products">
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="assets/image.png" alt="">
+            <h3>Snail Mucin Serum</h3>
+            <p>120 د.ل</p>
+            <a href="product.html" class="btn-secondary">عرض المنتج</a>
+        </div>
+
+        <div class="product-card">
+            <img src="assets/image.png" alt="">
+            <h3>Some By Mi Toner</h3>
+            <p>95 د.ل</p>
+            <a href="product.html" class="btn-secondary">عرض المنتج</a>
+        </div>
+
+        <div class="product-card">
+            <img src="assets/image.png" alt="">
+            <h3>Hairtamin Vitamins</h3>
+            <p>210 د.ل</p>
+            <a href="product.html" class="btn-secondary">عرض المنتج</a>
+        </div>
+
+        <div class="product-card">
+            <img src="assets/image.png" alt="">
+            <h3>Niacinamide Brightening Cream</h3>
+            <p>130 د.ل</p>
+            <a href="product.html" class="btn-secondary">عرض المنتج</a>
+        </div>
+
+        <div class="product-card">
+            <img src="assets/image.png" alt="">
+            <h3>Hyaluronic Moisturizer</h3>
+            <p>110 د.ل</p>
+            <a href="product.html" class="btn-secondary">عرض المنتج</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2025 Rénew Skincare – جميع الحقوق محفوظة</p>
+</footer>
+
+</body>
+</html>

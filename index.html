@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rénew Skincare – متجر العناية الكورية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <button id="themeToggle" class="theme-btn">🌙</button>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">Rénew</div>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="shop.html">التسوق</a>
+            <a href="about.html">عن رينيو</a>
+            <a href="contact.html">تواصل معنا</a>
+        </nav>
+    </header>
+    <script>
+document.querySelectorAll("a").forEach(link => {
+    if (link.href && !link.href.includes("#")) {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(() => window.location = this.href, 400);
+        });
+    }
+});
+document.querySelectorAll("a").forEach(link => {
+    if (link.href && !link.href.includes("#")) {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(() => window.location = this.href, 400);
+        });
+    }
+});
+const toggle = document.getElementById("themeToggle");
+toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+});
+</script>
+
+
+    <!-- HERO -->
+    <section class="hero">
+    <div class="hero-text">
+        <h1>اكتشفي جمالك مع منتجات العناية الكورية</h1>
+        <p>أفضل الماركات الكورية الأصلية الآن في ليبيا</p>
+        <a href="shop.html" class="btn-primary">تسوقي الآن</a>
+    </div>
+</section>
+    <!-- BRANDS -->
+    <section class="brands">
+        <h2>الماركات المميزة</h2>
+        <div class="brand-list">
+            <div class="brand-card">Some By Mi</div>
+            <div class="brand-card">Pyunkang Yul</div>
+            <div class="brand-card">Neogen</div>
+            <div class="brand-card">Hairtamin</div>
+        </div>
+    </section>
+
+    <!-- BEST SELLERS -->
+    <section class="products">
+        <h2>الأكثر مبيعاً</h2>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="assets/p1.jpg" alt="">
+                <h3>Serum Snail Mucin</h3>
+                <p>120 د.ل</p>
+                <a href="product.html" class="btn-secondary">عرض المنتج</a>
+            </div>
+
+            <div class="product-card">
+                <img src="assets/p2.jpg" alt="">
+                <h3>Some By Mi Toner</h3>
+                <p>95 د.ل</p>
+                <a href="product.html" class="btn-secondary">عرض المنتج</a>
+            </div>
+
+            <div class="product-card">
+                <img src="assets/p3.jpg" alt="">
+                <h3>Hairtamin Vitamins</h3>
+                <p>210 د.ل</p>
+                <a href="product.html" class="btn-secondary">عرض المنتج</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="instagram">
+        <h2>تابعينا على إنستغرام</h2>
+        <div class="ig-grid">
+            <img src="assets/image copy 2.png">
+            <img src="assets/image copy 3.png">
+            <img src="assets/image copy.png">
+            <img src="assets/image copy 4.png">
+        </div>
+        <a class="btn-primary" href="https://instagram.com/renew.skincare.ly" target="_blank">
+            @renew.skincare.ly
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 Rénew Skincare – جميع الحقوق محفوظة</p>
+    </footer>
+
+</body>
+</html>
