@@ -27,6 +27,55 @@ body {
     font-weight: 500;
 }
 
+/* CONTACT PAGE FIX */
+.contact {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-wrapper {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;     /* STACK ELEMENTS */
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;     /* STACK INPUTS VERTICALLY */
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.send-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+}
+
+.contact-info {
+    text-align: center;
+    line-height: 1.8;
+}
+
 /* HERO */
 .hero {
     background: url("assets/background.jpg");
@@ -312,3 +361,4 @@ section:nth-of-type(4) { animation-delay: 0.8s; }
     margin-top: 20px;
     color: #C7527A;
 }
+
